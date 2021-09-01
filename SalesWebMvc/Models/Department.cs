@@ -14,6 +14,11 @@ namespace SalesWebMvc.Models {
         {
         }
 
+        public Department(string name)
+        {
+            Name = name;
+        }
+
         public Department(int id, string name)
         {
             Id = id;
@@ -29,5 +34,7 @@ namespace SalesWebMvc.Models {
         {
             return Sellers.Sum(seller => seller.TotalSales(initial, final));
         }
+
+
     }
 }
